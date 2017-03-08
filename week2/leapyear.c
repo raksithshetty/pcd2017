@@ -1,7 +1,7 @@
 #include<stdio.h>
 int isleap(int yr)
 {
-if(yr%400==00)
+if(yr%100==0)
 {
 return 0;
 }
@@ -13,13 +13,13 @@ else if(yr%4==0)
 {
 return 2;
 }
-else 
+else
 {
 return -1;
 }
 }
 int main()
-{ 
+{
 int year,r;
 printf("enter the year to be checked for leap year\n");
 scanf("%d",&year);
@@ -30,8 +30,15 @@ case 0:
 printf("it is an quadranal leap year\n");
 break;
 case 1:
-printf("it is an century leap year\n");
+printf("it is an centuary leap year\n");
 break;
 case 2:
 printf("it is an leap year\n");
 break;
+case -1:
+printf("it is not an leap year\n");
+default:
+break;
+}
+return 0;
+}
